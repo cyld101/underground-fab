@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the Underground Fab portfolio - custom welding, fabrication projects, battery racks, and more.">
+  <title>Portfolio | Underground Fab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Underground <span>Fab</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Our <span class="accent-text">Work</span></h1>
+      <p>From battery racks to fully custom builds — here's what comes out of the Underground Fab shop.</p>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section>
+    <div class="container">
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="battery-racks">Battery Racks</button>
+        <button class="filter-btn" data-filter="custom">Custom Builds</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Gallery items are loaded from js/gallery-data.js -->
+      </div>
+
+      <div id="galleryEmpty" style="display:none; text-align:center; padding:4rem 0;">
+        <p style="color:var(--text-secondary); font-size:1.1rem;">No images in this category yet. Check back soon!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+      <img src="" alt="" id="lightboxImage">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
+    </div>
+  </div>
+
+  <!-- HOW TO ADD IMAGES -->
+  <!--
+    =====================================================
+    HOW TO ADD NEW PORTFOLIO IMAGES:
+    =====================================================
+    1. Add your image file to the /images/gallery/ folder
+    2. Open /js/gallery-data.js
+    3. Add a new entry to the galleryImages array:
+       {
+         src: "images/gallery/your-image.jpg",
+         title: "Image Title",
+         description: "Short description",
+         category: "battery-racks" | "custom" | "process"
+       }
+    4. Save and refresh the page!
+    =====================================================
+  -->
+
+  <!-- CTA -->
+  <section class="about">
+    <div class="container" style="text-align:center;">
+      <h2 class="section-title">Like What You <span class="accent-text">See</span>?</h2>
+      <span class="section-divider"></span>
+      <p class="section-subtitle">Every project starts with a conversation. Tell us what you need and we'll make it happen.</p>
+      <a href="index.html#contact" class="btn btn-primary">Start Your Project</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Underground <span>Fab</span></div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">FB</a>
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Underground Fab. All rights reserved. Built with steel and pride.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/gallery-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
